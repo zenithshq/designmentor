@@ -16,7 +16,7 @@ export default function Page () {
                     <span className="ml-3 text-xl font-bold underlined-2">Design Mentor</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5">
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/">Home</a>
+                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="#home">Home</a>
                     <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/challenges">Challenges</a>
                     <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/team">Team</a>
                     <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/articles">Articles</a>
@@ -29,7 +29,8 @@ export default function Page () {
                 </div>
             </header>
 
-            <h1 className="text-center pt-12 text-4xl font-bold">Soon...</h1>
+            <h1 className="text-center text-3xl pt-12 font-bold text-black">Soon ...</h1>
+
         </div>
     )
 }

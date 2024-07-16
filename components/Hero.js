@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const Hero = () => {
@@ -24,7 +25,11 @@ export const Hero = () => {
         setRotateY(-10);
     };
     return (
-        <div className="bg-shapes">
+        <motion.div className="bg-shapes"
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
+        viewport={{ once: true }}>
             <header className="text-gray-600 body-font pt-4 ">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -95,9 +100,9 @@ export const Hero = () => {
                 </div>
             </section>
 
-            <div className="pt-12 pb-16">
+            <div className="pt-16 pb-16">
                 <hr/>
             </div>
-        </div>
+        </motion.div>
     )
 }

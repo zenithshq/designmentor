@@ -31,6 +31,13 @@
     min-width: 450px;
 }
 
+.card {
+    margin-top: 60px;
+    max-width: 420px;
+}
+
+
+
 @media only screen and (max-width: 1025px) {
     .flexbox-custom {
         display: block;
@@ -38,6 +45,9 @@
     .op {
         min-width: 200px;
         padding-top: 20px;
+    }
+    .card img {
+        width: 100%;
     }
 }
 
@@ -128,4 +138,9 @@ transition: background 0.2 ease-out;
         padding-top: 0px;
         margin-top: -40px;
     }
+}
+
+
+figcaption {
+    margin-top: 80px;
 }
