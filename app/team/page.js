@@ -33,7 +33,7 @@ export default function Page () {
             <p className="text-center text-lg pt-2 font-medium text-slate-600 custom-spacing">Currently design mentor has 1 team member</p>
 
             <div className="card md:flex shadow-2xl mx-auto hover:shadow-xl bg-gray-100">
-                <img class="h-auto rounded" src="https://cdn.discordapp.com/avatars/1244547281743642669/e295210b112b62213518ced1d5b1af0f.webp?size=160" alt="avatar" width="300"/>
+                <img class="h-auto rounded" src="/avatar.jpg" alt="avatar" width="175"/>
                 <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                     <p class="text-md font-medium custom-spacing text-slate-600">
                         Lead Developer <b>@designmentor</b>
