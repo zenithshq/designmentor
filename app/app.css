@@ -8,6 +8,10 @@
     word-spacing: 6px;
 }
 
+.spacing-custom {
+    word-spacing: 4px;
+}
+
 .wahatag {
     font-size: 20px;
     color: #313131 !important;
@@ -48,6 +52,10 @@
     }
     .card img {
         width: 100%;
+    }
+    .grid {
+        display: block;
+        min-width: 350px;
     }
 }
 
