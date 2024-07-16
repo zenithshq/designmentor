@@ -12,6 +12,10 @@ export default function Page () {
     const handleRedirect = () => {
         window.location.href = '/style-guide.md';
     };
+
+    const heckerhai = () => {
+        window.location.href = '/designs/design_1.png';
+    }
     return (
         <div className="mx-auto md:max-w-lg lg:max-w-7xl px-14">
             <header className="text-gray-600 body-font pt-4 ">
@@ -38,12 +42,12 @@ export default function Page () {
                             <h2 className="font-bold text-red-400">CSS</h2>
                     </div>
                     <p className="text-slate-500 font-medium custom-spacing pt-4">
-                        Create a simple social profile with any language or framework you'd like to. This is the first ever challenge on Design Mentor and the starter challenge! Download the files and get started with your first design now!
+                        Create a simple social profile with any language or framework you&apos;d like to. This is the first ever challenge on Design Mentor and the starter challenge! Download the files and get started with your first design now!
                     </p>
                     <br/>
                     <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a onClick={handleRedirect}>Download Files</a></button>
                 </div>
-                <img src="/designs/design_1.png" className="rounded" width="500" />
+                <img src="/designs/design_1.png" className="rounded" width="500" onClick={heckerhai} />
 
 
             </div>
