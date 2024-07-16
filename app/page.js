@@ -1,5 +1,5 @@
-import { Hero } from '@/components/Hero';
-import { Introduction } from "@/components/Introduction"
+import { Hero } from '../components/Hero';
+import { Introduction } from "../components/Introduction"
 
 
 import './app.css';
