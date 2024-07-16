@@ -1,0 +1,131 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap');
+
+* {
+    font-family: "Satoshi", sans-serif;
+}
+
+.custom-spacing {
+    word-spacing: 6px;
+}
+
+.wahatag {
+    font-size: 20px;
+    color: #313131 !important;
+    font-weight: bold;
+    display: flex;
+    gap: 9px;
+
+    text-decoration: underline; 
+}
+
+.wahatag svg {
+    width: 20px;
+}
+
+.flexbox-custom {
+    display: flex;
+    gap: 100px;
+}
+
+.op {
+    min-width: 450px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .flexbox-custom {
+        display: block;
+    }
+    .op {
+        min-width: 200px;
+        padding-top: 20px;
+    }
+}
+
+.flexbox-rechya img {
+    width: 900px;
+}
+
+/* .underlined {
+    position: relative;
+    margin-right: 1rem;
+  }
+.underlined:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 7px;
+    width: 100%;
+    border: solid 2px #cb1829;
+    border-color: #cb1829 transparent transparent transparent;
+    border-radius: 50%;
+} */
+
+.underline-animate {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.underline-animate::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(116, 116, 116); /* Adjust color as needed */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.underline-animate:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.bg-shapes {
+    background-image: url("/background.png");
+    background-size: cover;
+
+}
+
+.underlined {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 5px;
+    text-decoration-color: #ff3131;
+    text-decoration-thickness: 2px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #ff6666;
+border-radius: 500px;
+transition: background 0.2 ease-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #ff8080;
+transition: background 0.2 ease-out;
+}
+
+@media (max-width: 1025px) {
+    .pt-to-remove {
+        padding-top: 0px;
+        margin-top: -40px;
+    }
+}
