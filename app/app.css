@@ -1,12 +1,14 @@
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap');
+/* @import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap');
 
 * {
     font-family: "Satoshi", sans-serif;
-}
+} */
 
-.custom-spacing {
-    word-spacing: 6px;
-}
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: "IBM Plex Sans", sans-serif;
+} */
 
 .spacing-custom {
     word-spacing: 4px;
@@ -104,12 +106,6 @@
     transition: transform 0.3s ease-out;
 }
 
-.bg-shapes {
-    background-image: url("/background.png");
-    background-size: cover;
-
-}
-
 .underlined {
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -120,35 +116,136 @@
 
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-background: #ffffff;
+background: #ffffff00;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: #ff6666;
+background: #ffffff06;
 border-radius: 500px;
 transition: background 0.2 ease-out;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-background: #ff8080;
-transition: background 0.2 ease-out;
-}
 
 @media (max-width: 1025px) {
     .pt-to-remove {
         padding-top: 0px;
         margin-top: -40px;
     }
+
+    .navbar-header {
+        display: flex;
+        gap: 10px;
+        max-width: 340px;
+    }
 }
 
 
 figcaption {
     margin-top: 80px;
+}
+
+.navbar-header {
+    margin: auto;
+    width: 418px;
+    padding: 23px 10px 23px 40px;
+    background: rgba(255, 255, 255, 0.15); /* Adjust the background color and opacity */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    box-shadow: 0px 5px 15px -5px rgb(11, 19, 37);
+}
+
+* {
+    color: white;
+}
+
+/* .geist {
+    font-family: "Geist Sans", sans-serif;
+    font-weight: 400;
+} */
+
+.fnt-bold {
+    font-weight: 500 !important;
+}
+
+#dml {
+    margin:auto;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(43, 70, 108, 0.3); /* Adjust the background color and opacity */
+    backdrop-filter: blur(10px); /* Adjust the blur radius */
+    border: 1px solid rgba(25, 22, 49, 0.413);
+    border-radius: 100px;
+}
+
+.code-img {
+    min-width: 350px;
+}
+
+#dml {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 16px;
+    transition: color 0.4s;
+    box-shadow: 0px 5px 15px -5px rgb(11, 19, 37);
+}
+
+#dml::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(90deg, transparent, rgba(17, 34, 58, 0.4), transparent);
+    animation: gradient-animation 1s linear infinite;
+    z-index: -1;
+    animation-play-state: paused;
+}
+
+
+#dml:hover::before {
+    animation-play-state: running;
+    /* background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); */
+}
+#dml svg {
+    margin-top: 1.7px;
+}
+
+@keyframes gradient-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+.btn-hecker {
+    background-image: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,.3),transparent);
+    width: 200px;
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid hsla(0, 0%, 100%, 0.084);
+}
+
+.btn-hecker:hover {
+    background-image: radial-gradient(ellipse 100% 80% at 50% -20%,rgba(57, 56, 108, 0.3),transparent);
+}
+
+.introduct-wall {
+    background-image: url("/image.png");
+}
+
+.svg-hecker {
+    max-width: 650px;
 }

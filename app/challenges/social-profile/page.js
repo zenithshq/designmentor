@@ -14,7 +14,7 @@ export default function Page () {
     };
 
     const heckerhai = () => {
-        window.location.href = '/designs/design_1.png';
+        window.location.href = '/designs/design_1.png'; 
     }
     return (
         <div className="mx-auto md:max-w-lg lg:max-w-7xl px-14">
@@ -22,7 +22,7 @@ export default function Page () {
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     
-                    <span className="ml-3 text-xl font-bold underlined-2">Design Mentor</span>
+                    <span className="ml-3 text-xl font-bold underlined-2 text-black">Design Mentor</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5">
                     <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/">Home</a>

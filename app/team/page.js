@@ -1,42 +1,40 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 
 import Link from "next/link";
 import '/app/app.css'
+import { motion } from "framer-motion";
 
 export default function Page () {
     return (
-        <div className="mx-auto md:max-w-lg lg:max-w-7xl px-14">
-            <header className="text-gray-600 body-font pt-4 ">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg> */}
-                    <span className="ml-3 text-xl font-bold underlined-2">Design Mentor</span>
-                    </a>
-                    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5">
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/">Home</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/challenges">Challenges</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/team">Team</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/articles">Articles</a>
-                    </nav>
-                    {/* <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                    </button> */}
-                </div>
-            </header>
+        <main style={{
+            height: `100vh`
+        }}>
 
-            <h1 className="text-center text-3xl pt-12 font-bold text-black">Our Team</h1>
-            <p className="text-center text-lg pt-2 font-medium text-slate-600 custom-spacing">Currently design mentor has 1 team member</p>
+        <div className="mx-auto md:max-w-lg lg:max-w-7xl px-14">
+                <br/>
+                <br/>
+                <motion.header className="navbar-header flex gap-10"
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeIn" }}
+                viewport={{ once: true }}>
+                    <a href="#home" className="hover:text-slate-300">Home</a>
+                    <a href="/challenges" className="hover:text-slate-300">Challenges</a>
+                    <a href="/team" className="hover:text-slate-300">Team</a>
+                    <a href="/articles" className="hover:text-slate-300">Articles</a>
+                </motion.header>
+
+            <h1 className="text-center text-3xl pt-12 font-bold text-white">Our Team</h1>
+            <p className="text-center text-lg pt-2 font-medium text-slate-400 custom-spacing">Currently design mentor has 1 team member</p>
 
             <div className="card md:flex shadow-2xl mx-auto hover:shadow-xl bg-gray-100">
                 <img class="h-auto rounded" src="/avatar.jpg" alt="avatar" width="175"/>
                 <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-                    <p class="text-md font-medium custom-spacing text-slate-600">
-                        Lead Developer <b>@designmentor</b>
+                    <p class="text-md font-medium text-slate-600">
+                        Lead Developer <b className="text-slate-600">@designmentor</b>
                     </p>
                     <figcaption class="font-medium">
                     <div class="text-sky-600 font-medium">
@@ -80,5 +78,6 @@ export default function Page () {
             </div>
             <br/>
         </div>
+        </main>
     )
 }

@@ -7,102 +7,68 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const Hero = () => {
-    const [rotateX, setRotateX] = useState(4);
-    const [rotateY, setRotateY] = useState(-10);
+    // const [rotateX, setRotateX] = useState(4);
+    // const [rotateY, setRotateY] = useState(-10);
 
-    const handleMouseMove = (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        setRotateX((y - centerY) / 10);
-        setRotateY((centerX - x) / 10);
-    };
+    // const handleMouseMove = (e) => {
+    //     const rect = e.currentTarget.getBoundingClientRect();
+    //     const x = e.clientX - rect.left;
+    //     const y = e.clientY - rect.top;
+    //     const centerX = rect.width / 2;
+    //     const centerY = rect.height / 2;
+    //     setRotateX((y - centerY) / 10);
+    //     setRotateY((centerX - x) / 10);
+    // };
 
-    const handleMouseLeave = () => {
-        setRotateX(4);
-        setRotateY(-10);
-    };
+    // const handleMouseLeave = () => {
+    //     setRotateX(4);
+    //     setRotateY(-10);
+    // };
     return (
-        <motion.div className="bg-shapes"
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeIn" }}
-        viewport={{ once: true }}>
-            <header className="text-gray-600 body-font pt-4 ">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg> */}
-                    <span className="ml-3 text-xl font-bold underlined-2">Design Mentor</span>
-                    </a>
-                    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5">
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="#home">Home</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/challenges">Challenges</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/team">Team</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/articles">Articles</a>
-                    </nav>
-                    {/* <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                    </button> */}
-                </div>
-            </header>
-                
-            <section className="text-gray-600 body-font pt-16">
-                <div className="flexbox-custom m-4">
-                    <div className="pt-12 pt-to-remove"><h1 className="text-3xl font-bold text-gray-900">Improve Your Frontend Skills <br/> With <span className="underlined">Design Mentor</span></h1>
-                    <p className="pt-5 text-gray-600 custom-spacing font-medium text-lg">Welcome to this amazing platform developed for beginners to improve their frontend skills. We have many interesting challenges for you to complete and learn to build new projects.</p>
-                    </div>
-                    <div
-                        className="op md:w-1/2 w-full"
-                        onMouseMove={handleMouseMove}
-                        onMouseLeave={handleMouseLeave}
-                        style={{
-                            perspective: '1000px'
-                        }}
-                        >
-                        <div
-                            className={`h-full bg-gray-100 p-8 rounded testimonial`}
-                            style={{
-                            transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
-                            }}
-                        >
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            className="block w-5 h-5 text-gray-400 mb-4"
-                            viewBox="0 0 975.036 975.036"
-                            >
-                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-                            </svg>
-                            <p className="leading-relaxed custom-spacing font-medium mb-6">
-                            I have mastered frontend skills using Design Mentor. I really appreciate their UI design team for designing these goods design that helped me master frontend.
-                            </p>
-                            <a className="inline-flex items-center">
-                            <img
-                                alt="testimonial"
-                                src="https://avatars.githubusercontent.com/u/157343700?v=4"
-                                width={48}
-                                height={48}
-                                className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                            />
-                            <span className="flex-grow flex flex-col pl-4">
-                                <span className="title-font font-medium text-gray-900">Ronit Raj</span>
-                                <span className="text-gray-500 text-sm">Fullstack Developer</span>
-                            </span>
+        <div>
+            <section id="hero">
+                <div className="pb-12"></div>
+                <motion.header className="navbar-header flex gap-10"
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeIn" }}
+                viewport={{ once: true }}>
+                    <a href="#home" className="hover:text-slate-300">Home</a>
+                    <a href="/challenges" className="hover:text-slate-300">Challenges</a>
+                    <a href="/team" className="hover:text-slate-300">Team</a>
+                    <a href="/articles" className="hover:text-slate-300">Articles</a>
+                </motion.header>
+                <br/>
+                <br/>
+                    <motion.div
+                    initial={{ opacity: 0, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.5, ease: "easeIn" }}
+                    viewport={{ once: true }}
+                    className="pt-12">
+                        <button className="geist text-center" id="dml">
+                            <div className="flex px-8">
+                                Follow Us On Twitter
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#F0F0F0" height="20" className="ml-4" width="20px" viewBox="0 0 321.666 321.666">
+                                <path d="M320.518,70.438c-1.187-1.076-2.952-1.21-4.287-0.325c-5.903,3.916-13.86,5.904-20.473,6.914  c7.907-6.45,17.13-16.588,17.069-29.652c-0.006-1.314-0.748-2.515-1.921-3.108c-1.173-0.593-2.58-0.478-3.642,0.296  C295.279,53.309,278.1,57.903,271.81,59.37c-4.448-7.33-19.746-28.824-46.187-28.824c-1.479,0-2.988,0.07-4.485,0.207  c-32.859,3.022-48.781,22.237-56.351,37.825c-4.786,9.855-6.888,19.397-7.809,25.699c-5.211-4.542-14.3-11.454-27.829-18.371  C108.481,65.337,72.983,52.739,21.247,52.739c-5.03,0-10.197,0.119-15.358,0.354c-1.174,0.054-2.243,0.693-2.846,1.702  c-0.603,1.009-0.659,2.254-0.148,3.313C13.937,81.04,37.69,94.51,53.153,101.18c-8.484,2.248-17.549,6.634-20.388,13.544  c-1.441,3.508-1.811,9.021,4.608,15.364c9.424,9.312,20.503,14.97,30.265,18.405c-7.648,1.361-13.755,3.697-15.735,7.584  c-0.753,1.48-1.612,4.518,1.1,8.246c13.001,17.878,44.162,24.83,57.98,25.964c-1.753,4.165-5.404,10.928-12.455,17.626  c-15.066,14.309-38.822,21.873-68.7,21.874c-0.003,0-0.006,0-0.009,0c-8.119,0-16.833-0.55-25.903-1.636  c-1.498-0.177-2.944,0.622-3.585,1.99c-0.641,1.367-0.333,2.991,0.764,4.028C40.484,271.42,85.2,291.113,130.41,291.12  c0.009,0,0.015,0,0.023,0c49.772,0,98.504-24.472,130.357-65.463c28.367-36.505,39.233-80.199,30.06-120.383  c6.128-2.623,19.655-10.379,30.406-30.602C322.008,73.258,321.704,71.514,320.518,70.438z"/>
+                                </svg>
+                            </div>
+                        </button>
+                        <div className="pt-2 pb-2">
+                            <h1 className="text-5xl pt-8 fnt-bold geist">Build & Discover Various UI Designs</h1>
+                            <p className="text-xl pt-4 geist intro-para text-slate-300">Find and solve new design and user interface challenges that can help you to improve your overall frontend development skills. Our designs are easy, modern and minimalistic which are easier to make. We have challenges sorted by difficulties.</p>
+                        </div>
+                        <div>
+                        </div>
+                        <br/>
+                        <button className="geist text-center btn-hecker">
+                            <a href="/challenges" className="flex ml-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                            <p className="text-center">View Challenges</p>
                             </a>
-                        </div>
-                        </div>
-                </div>
+                        </button>
+                    </motion.div>
             </section>
-
-            <div className="pt-16 pb-16">
-                <hr/>
-            </div>
-        </motion.div>
+        </div>
     )
 }

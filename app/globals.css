@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+main {
+    background-image: url('/bg.png');
+    height: 100%;
+    background-size: cover;
+}

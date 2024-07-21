@@ -1,31 +1,33 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 
 import Link from "next/link";
 import '/app/app.css'
 import path from 'path';
-import { promises as fs } from 'fs';
+
+import { motion } from "framer-motion";
 
 
 export default function Page () {
       
     return (
+        <main style={{
+            height: `100vh`,
+        }}>
         <div className="mx-auto md:max-w-lg lg:max-w-7xl px-14">
-            <header className="text-gray-600 body-font pt-4 ">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    
-                    <span className="ml-3 text-xl font-bold underlined-2">Design Mentor</span>
-                    </a>
-                    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5">
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/">Home</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/challenges">Challenges</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/team">Team</a>
-                    <a className="mr-5 text-gray-600 font-medium custom-spacing text-lg underline-animate hover:text-gray-500 " href="/articles">Articles</a>
-                    </nav>
-                    
-                </div>
-            </header>
+            <div className="pt-12"></div>
+            <motion.header className="navbar-header flex gap-10"
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeIn" }}
+                viewport={{ once: true }}>
+                    <a href="#home" className="hover:text-slate-300">Home</a>
+                    <a href="/challenges" className="hover:text-slate-300">Challenges</a>
+                    <a href="/team" className="hover:text-slate-300">Team</a>
+                    <a href="/articles" className="hover:text-slate-300">Articles</a>
+            </motion.header>
 
             <div className="grid grid-cols-3 gap-16 p-8 pt-16">
                 <div className="shadow-2xl border-gray-400 rounded">
@@ -39,7 +41,7 @@ export default function Page () {
                             <h2 className="font-bold text-red-400">CSS</h2>
                         </div>
 
-                        <p className="text-slate-500 font-medium custom-spacing pt-4">
+                        <p className="text-slate-400 font-medium pt-4">
                             A social profile with simple HTML and CSS. This challenge is helpful for learning flexbox and grid.
                         </p>
 
@@ -54,5 +56,6 @@ export default function Page () {
             </div>
 
         </div>
+        </main>
     )
 }
